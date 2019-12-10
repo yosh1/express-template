@@ -137,3 +137,6 @@ Temporary Items
 yarn.lock
 package-lock.json
 .vscode
+
+dest/
+dist/

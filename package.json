@@ -6,8 +6,8 @@
   "scripts": {
     "start": "node src/app.js",
     "nodemon": "nodemon --exec babel-node src/app.js",
-    "build": "babel src --out-dir dest",
-    "boot": "node dest/app.js",
+    "build": "babel src --out-dir dist",
+    "boot": "node dist/app.js",
     "deploy": "gcloud app deploy",
     "commit": "node ./node_modules/cz-customizable/standalone.js"
   },
