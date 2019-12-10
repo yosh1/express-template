@@ -58,5 +58,8 @@
   },
   "eslintIgnore": [
     "node_modules"
-  ]
+  ],
+  "engines": {
+    "node": "10.x"
+  }
 }
