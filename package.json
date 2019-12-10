@@ -1,0 +1,62 @@
+{
+  "name": "express-template",
+  "version": "1.0.2",
+  "description": "",
+  "main": "src/app.js",
+  "scripts": {
+    "start": "node src/app.js",
+    "nodemon": "nodemon --exec babel-node src/app.js",
+    "build": "babel src --out-dir dest",
+    "boot": "node dest/app.js",
+    "deploy": "gcloud app deploy",
+    "commit": "node ./node_modules/cz-customizable/standalone.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yoshi1125hisa/express-template.git"
+  },
+  "author": "yoshi1125hisa",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/yoshi1125hisa/express-template/issues"
+  },
+  "homepage": "https://github.com/yoshi1125hisa/express-template#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "path": "^0.12.7",
+    "dotenv": "^8.2.0",
+    "helmet": "^3.21.2",
+    "nodemon": "^1.19.4"
+  },
+  "devDependencies": {
+    "@babel/core": "7.5.4",
+    "@babel/node": "7.5.0",
+    "@babel/preset-env": "7.5.4",
+    "nodemon": "^1.19.4",
+    "@babel/cli": "7.5.0",
+    "@babel/register": "7.4.4",
+    "cz-customizable": "6.2.0",
+    "eslint": "^6.6.0",
+    "eslint-config-prettier": "^6.5.0",
+    "eslint-plugin-node": "^10.0.0",
+    "eslint-plugin-prettier": "^3.1.1",
+    "husky": "^3.0.9",
+    "lint-staged": "^9.4.2",
+    "prettier": "^1.18.2"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.js": [
+      "eslint --fix",
+      "git add"
+    ]
+  },
+  "eslintIgnore": [
+    "node_modules"
+  ]
+}
